@@ -16,7 +16,8 @@
 </script>
 
 <div bind:this={content} class="text-white p-10 z-20 flex items-center justify-center gap-10">
-	<div class="relative">
+	<slot />
+	<!-- <div class="relative">
 		<div class="absolute -top-5 -left-5 bg-amber-500 text-white py-1 px-3 rounded-full">
 			<h1 class="text-lg">Source 1: A photo of a gold nugget.</h1>
 		</div>
@@ -34,5 +35,5 @@
 			praesentium! Unde obcaecati eum distinctio quaerat sapiente voluptatem maxime autem in alias? Reprehenderit
 			nisi nam voluptatibus delectus provident praesentium aut.
 		</p>
-	</div>
+	</div> -->
 </div>

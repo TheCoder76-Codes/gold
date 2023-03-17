@@ -16,7 +16,8 @@
 </script>
 
 <div bind:this={content} class="text-white p-10 z-20 flex items-center justify-center gap-10">
-	<div>
+	<slot />
+	<!-- <div>
 		<h1 class="text-4xl font-display">WHAT IS THE GOLD RUSH?</h1>
 		<p class="text-base max-w-xl">
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus explicabo tempora commodi. Ad, quos
@@ -34,5 +35,5 @@
 			<h1 class="text-lg">Source 1: A photo of a gold nugget.</h1>
 		</div>
 		<img src="https://picsum.photos/600/300" alt="Gold." />
-	</div>
+	</div> -->
 </div>
