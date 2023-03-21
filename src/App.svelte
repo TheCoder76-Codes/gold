@@ -84,7 +84,7 @@
 			<p class="text-base max-w-xl">
 				In August 1851, John Dunlop and James Regan left the gold field at Buninyong when it was overrun with
 				many people looking for gold after news got out about the discovery of gold in that region. They moved
-				out to Ballarat where they discovered a much richer digging on the 21st of August 1851. However, a
+				out to Ballarat where they used gold panning and cradles to help them find gold as shown on the right. They discovered a much richer digging on the 21st of August 1851. However, a
 				newspaper reporter had followed them to the diggings and had reported on their finds and, as a result,
 				they only had the goldfield to themselves for a week before other prospectors came in. Within a year,
 				more than 20,000 diggers were trying their luck in the mine shafts of Ballarat.
@@ -163,7 +163,7 @@
 				Australia. However, this route provoked many risks, from drifting icebergs to the wild seas created by
 				frequent storms. The slightest of error in navigation along this route could lead to a disaster, and the
 				number of deaths increased by taking this route, compared to the traditional way of getting to
-				Australia.
+				Australia. The artwork on the right depicts the tradgedy of the shipwrecks that occured along the great circle route. The wild seas are evident, tearing apart the ship and putting the passenger's lives at great risk. This was the unfortuneate reality of most ships taking this route to Australia.
 			</p>
 		</div>
 		<div class="relative">
@@ -199,9 +199,8 @@
 		<div>
 			<h1 class="text-4xl font-display">LIFE ON BOARD: GETTING TO AUSTRALIA</h1>
 			<p class="text-base max-w-3xl">
-				Most people making their way to Australia were not familiar with sea travel, and the travel to Australia
-				involved navigating through some of the wildest oceans. Usually, passengers would travel in steerage
-				class, which were cramped quarters below sea level supporting the spread of disease and sickness, making
+				Most people making their way to Australia were unfamilar with sea travel, and the travel to Australia
+				involved navigating through some of the wildest oceans. As seen in the image below, living quaters were quite cramped in 'steerage' class, where most passengers were travelling. This would support the spread of disease and sickness, making
 				an unpleasant journey. Seasickness was common, especially among those who were unaccustomed to sea
 				travel. As a result of this, death at sea was very common, with 1 in 5 children and 1 in 60 adults not
 				being able to survive the journey.
@@ -263,10 +262,35 @@
 			/>
 		</div>
 	</Info>
+    <Info bind:controller>
+        <div class="relative">
+			<div class="absolute -top-5 -left-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
+				<h1 class="text-base">
+					<a href="#s9">Source 9: An artwork of Chinese immigrants.</a>
+				</h1>
+			</div>
+			<img
+				src="https://museumsvictoria.com.au/media/6926/000000357.jpg"
+				alt="'A Flood of Celestial Light pouring in upon the Diggings' reproduced from Melbourne Punch"
+				width="600px"
+				height="400px"
+			/>
+		</div>
+		<div>
+			<h1 class="text-4xl font-display">THE VICTORIAN POLL TAX</h1>
+			<p class="text-base max-w-xl">
+				Chinese miners in Ballarat faced a difficult time in the gold fields. With a language barrier and differentiators in dress and appearance, Chinese miners were more likely to face discrimination in the diggings. Furthermore, Chinese miners would go through the abandoned mines the Europeans left behind, often finding gold that was missed, which made them a subject of discrimination. Eventually, the Victorian colony passed an act that restricted the entry of Chinese migrants. The act entitled ships to only have 1 Chinese person for 10 tonnes of the ship’s cargo. On top of this, ships were required to pay £10 for each Chinese migrant. 
+			</p>
+            <p class="text-base max-w-xl mt-3">
+                To avoid this, the Chinese migrants often travelled to South Australia instead and would walk 500 kilometres over to Ballarat carrying their belongings. The image on the left shows the Chinese miners making their journey from Adelaide to the goldfields in Victoria. There is a large group of them, all carrying their belongings meaning that they most likely just got off a ship and have started the journey in a big group. There is some evidence that this act influenced the creation of the White Australia Policy in 1901, which restricted non-European immigrants from coming into the country.
+            </p>
+		</div>
+
+	</Info>
 
 	<!-- Sources Bibliography -->
 	{#each sources as source, i}
-		<div id={`s${i + 1}`}>
+		<div id={`s${i + 1}`} class="focus:text-amber-500">
 			{source}
 		</div>
 	{/each}
