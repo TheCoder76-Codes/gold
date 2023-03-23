@@ -25,7 +25,17 @@
 
 	if (window.location.pathname == '/bibliography') {
 		bibliographyShown = true
-	}
+	} else if (window.location.pathname == '/') {
+        bibliographyShown = false
+    }
+
+    window.addEventListener('popstate', () => {
+        if (window.location.pathname == '/bibliography') {
+		    bibliographyShown = true
+	    } else if (window.location.pathname == '/') {
+            bibliographyShown = false
+        }
+    })
 	function showBibliography() {
 		bibliographyShown = true
 		history.pushState({}, '', '/bibliography')
@@ -65,7 +75,7 @@
 			<div class="relative">
 				<div class="absolute -top-5 -right-5 bg-yellow-600 text-white py-1 px-3 rounded-full shadow-md">
 					<h1 class="text-base">
-						<a href="#s1">Source 1: 'Prospectors' by ST Gill.</a>
+						<button on:click={() => biblio('s1')}>Source 1: 'Prospectors' by ST Gill.</button>
 					</h1>
 				</div>
 				<img
@@ -80,7 +90,7 @@
 			<div class="relative">
 				<div class="absolute -top-5 -left-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
 					<h1 class="text-base">
-						<a href="#s2">Source 2: 'Gold Washing' by George French Angas.</a>
+						<button on:click={() => biblio('s2')}>Source 2: 'Gold Washing' by George French Angas.</button>
 					</h1>
 				</div>
 				<img
@@ -121,7 +131,7 @@
 			<div class="relative">
 				<div class="absolute -top-5 -right-5 bg-yellow-600 text-white py-1 px-3 rounded-full shadow-md">
 					<h1 class="text-base">
-						<a href="#s3">Source 3: 'An Australian Gold Diggings' by Edwin Stockqueler.</a>
+						<button on:click={() => biblio('s3')}>Source 3: 'An Australian Gold Diggings' by Edwin Stockqueler.</button>
 					</h1>
 				</div>
 				<img
@@ -155,7 +165,7 @@
 			<div class="relative">
 				<div class="absolute -top-5 -left-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
 					<h1 class="text-base">
-						<a href="#s4">Source 4: 1850s Sailing Clipper by Bill Wood.</a>
+						<button on:click={() => biblio('s4')}>Source 4: 1850s Sailing Clipper by Bill Wood.</button>
 					</h1>
 				</div>
 				<img
@@ -200,7 +210,7 @@
 			<div class="relative">
 				<div class="absolute -top-5 -right-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
 					<h1 class="text-base">
-						<a href="#s5">Source 5: The wreck of the 'Loch Ard' in 1878.</a>
+						<button on:click={() => biblio('s5')}>Source 5: The wreck of the 'Loch Ard' in 1878.</button>
 					</h1>
 				</div>
 				<img
@@ -215,7 +225,7 @@
 			<div class="relative">
 				<div class="absolute -top-5 -left-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
 					<h1 class="text-base">
-						<a href="#s6">Source 6: The 'Great Circle' route used to get to Australia.</a>
+						<button on:click={() => biblio('s6')}>Source 6: The 'Great Circle' route used to get to Australia.</button>
 					</h1>
 				</div>
 				<img
@@ -253,7 +263,7 @@
 			<div class="relative">
 				<div class="absolute -top-5 -right-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
 					<h1 class="text-base">
-						<a href="#s7">Source 7: 'Emigrants at dinner' by unknown artist.</a>
+						<button on:click={() => biblio('s7')}>Source 7: 'Emigrants at dinner' by unknown artist.</button>
 					</h1>
 				</div>
 				<img
@@ -284,7 +294,7 @@
 			<div class="relative">
 				<div class="absolute -top-5 -right-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
 					<h1 class="text-base">
-						<a href="#s8">Source 8: Ally Heathcote's diary.</a>
+						<button on:click={() => biblio('s8')}>Source 8: Ally Heathcote's diary.</button>
 					</h1>
 				</div>
 				<img
@@ -299,7 +309,7 @@
 			<div class="relative">
 				<div class="absolute -top-5 -left-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
 					<h1 class="text-base">
-						<a href="#s9">Source 9: An artwork of Chinese immigrants.</a>
+						<button on:click={() => biblio('s9')}>Source 9: An artwork of Chinese immigrants.</button>
 					</h1>
 				</div>
 				<img
@@ -347,7 +357,7 @@
 			<div class="relative">
 				<div class="absolute -top-5 -right-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
 					<h1 class="text-base">
-						<a href="#s10">Source 10: A gold license used in Ballarat.</a>
+						<button on:click={() => biblio('s10')}>Source 10: A gold license used in Ballarat.</button>
 					</h1>
 				</div>
 				<img
@@ -362,7 +372,7 @@
 			<div class="relative">
 				<div class="absolute -top-5 -left-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
 					<h1 class="text-base">
-						<a href="#s11">Source 11: 'Swearing Allegiance to the Southern Cross' by Charles A Doudiet.</a>
+						<button on:click={() => biblio('s11')}>Source 11: 'Swearing Allegiance to the Southern Cross' by Charles A Doudiet.</button>
 					</h1>
 				</div>
 				<img
