@@ -126,7 +126,7 @@
 					Many people across the world came to Victoria for the gold rush. Some of the people travelled within
 					Australia, from other places to Ballarat for the gold rush. However, most of the prospectors would
 					come from places overseas such as Britain, the United States, Germany, and Poland. Australia also
-					saw a large influx of Chinese migrants, which was the largest number of non-European settlers to
+					saw a large influx of Chinese emigrants, which was the largest number of non-European settlers to
 					come to Australia for the gold rush. Many people abandoned their stable jobs in order to test their
 					luck in the mines, and there was a shortage of workers for this reason.
 				</p>
@@ -272,7 +272,7 @@
 		<Info bind:controller>
 			<div class="relative">
 				<div class="absolute -top-5 -left-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
-					<h1 class="text-base">Source 9: An artwork of Chinese immigrants.</h1>
+					<h1 class="text-base">Source 9: An artwork of Chinese emigrants.</h1>
 				</div>
 				<img
 					src="https://museumsvictoria.com.au/media/6926/000000357.jpg"
@@ -288,12 +288,12 @@
 					differentiators in dress and appearance, Chinese miners were more likely to face discrimination in
 					the diggings. Furthermore, Chinese miners would go through the abandoned mines the Europeans left
 					behind, often finding gold that was missed, which made them a subject of discrimination. Eventually,
-					the Victorian colony passed an act that restricted the entry of Chinese migrants. The act entitled
+					the Victorian colony passed an act that restricted the entry of Chinese emigrants. The act entitled
 					ships to only have 1 Chinese person for 10 tonnes of the ship’s cargo. On top of this, ships were
 					required to pay £10 for each Chinese migrant.
 				</p>
 				<p class="text-base max-w-xl mt-3">
-					To avoid this, the Chinese migrants often travelled to South Australia instead and would walk 500
+					To avoid this, the Chinese emigrants often travelled to South Australia instead and would walk 500
 					kilometres over to Ballarat carrying their belongings. The image on the left shows the Chinese
 					miners making their journey from Adelaide to the goldfields in Victoria. There is a large group of
 					them, all carrying their belongings meaning that they most likely just got off a ship and have
