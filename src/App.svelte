@@ -1,52 +1,33 @@
 <script>
 	import Video from './lib/Video.svelte'
 	import Info from './lib/Info.svelte'
-	import WorkInProgress from './lib/WorkInProgress.svelte'
 	import './app.css'
 	import { fade } from 'svelte/transition'
 	let controller = new ScrollMagic.Controller()
 
-	let sources = [
-		'https://www.nma.gov.au/defining-moments/resources/gold-rushes',
-		'https://www.nma.gov.au/learn/kspace/victorian-goldfields-1854/kids',
-		'https://commons.wikimedia.org/wiki/File:An_Australian_Gold_Diggings.jpg',
-		'https://museumsvictoria.com.au/media/6928/000010127.jpg',
-		'https://museumsvictoria.com.au/media/6933/000010025-loch-ard.jpg',
-		'https://museumsvictoria.com.au/media/6931/000017841.jpg',
-		'https://museumsvictoria.com.au/media/6936/000009990.jpg',
-		'https://collections.museumsvictoria.com.au/items/272753',
-		'https://museumsvictoria.com.au/media/6926/000000357.jpg',
-		'https://www.oldtreasurybuilding.org.au/wp-content/uploads/2018/06/Gold-Licence-ed-sm.jpg',
-		'https://www.nma.gov.au/__data/assets/image/0019/548011/MA23237597-Allegiance-1200w.jpg',
-		'https://sovereignhill.com.au/uploads/images/Welcome-Nugget-Replica_Landscape.jpg',
-	]
-
 	let bibliographyShown = false
+	let experience = false
 
-	if (window.location.pathname == '/bibliography') {
+	if (window.location.pathname == '/references') {
 		bibliographyShown = true
+		experience = false
 	} else if (window.location.pathname == '/') {
-        bibliographyShown = false
-    }
+		bibliographyShown = false
+		experience = false
+	}
 
-    window.addEventListener('popstate', () => {
-        if (window.location.pathname == '/bibliography') {
-		    bibliographyShown = true
-	    } else if (window.location.pathname == '/') {
-            bibliographyShown = false
-        }
-    })
+	window.addEventListener('popstate', () => {
+		if (window.location.pathname == '/references') {
+			bibliographyShown = true
+			experience = false
+		} else if (window.location.pathname == '/') {
+			bibliographyShown = false
+			experience = false
+		}
+	})
 	function showBibliography() {
 		bibliographyShown = true
-		history.pushState({}, '', '/bibliography')
-	}
-	function biblio(ele) {
-		bibliographyShown = true
-		history.pushState({}, '', '/bibliography')
-		setTimeout(() => {
-			ele = document.getElementById(ele)
-			ele.classList.add('text-amber-500')
-		}, 500)
+		history.pushState({}, '', '/references')
 	}
 	function hideBibliography() {
 		bibliographyShown = false
@@ -54,8 +35,7 @@
 	}
 </script>
 
-<WorkInProgress />
-{#if !bibliographyShown}
+{#if !bibliographyShown && !experience}
 	<main class="bg-black text-white" transition:fade>
 		<Video bind:controller />
 		<!--  -->
@@ -74,9 +54,7 @@
 			</div>
 			<div class="relative">
 				<div class="absolute -top-5 -right-5 bg-yellow-600 text-white py-1 px-3 rounded-full shadow-md">
-					<h1 class="text-base">
-						<button on:click={() => biblio('s1')}>Source 1: 'Prospectors' by ST Gill.</button>
-					</h1>
+					<h1 class="text-base">Source 1: 'Prospectors' by ST Gill.</h1>
 				</div>
 				<img
 					src="https://www.nma.gov.au/__data/assets/image/0010/547228/MA44137263-prospecting-1200w.jpg"
@@ -89,9 +67,7 @@
 		<Info bind:controller>
 			<div class="relative">
 				<div class="absolute -top-5 -left-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
-					<h1 class="text-base">
-						<button on:click={() => biblio('s2')}>Source 2: 'Gold Washing' by George French Angas.</button>
-					</h1>
+					<h1 class="text-base">Source 2: 'Gold Washing' by George French Angas.</h1>
 				</div>
 				<img
 					src="https://www.nma.gov.au/__data/assets/image/0007/567070/MA37181365-Gold-washing-1200w.jpg"
@@ -130,9 +106,7 @@
 			</div>
 			<div class="relative">
 				<div class="absolute -top-5 -right-5 bg-yellow-600 text-white py-1 px-3 rounded-full shadow-md">
-					<h1 class="text-base">
-						<button on:click={() => biblio('s3')}>Source 3: 'An Australian Gold Diggings' by Edwin Stockqueler.</button>
-					</h1>
+					<h1 class="text-base">Source 3: 'An Australian Gold Diggings' by Edwin Stockqueler.</h1>
 				</div>
 				<img
 					src="https://upload.wikimedia.org/wikipedia/commons/f/ff/An_Australian_Gold_Diggings.jpg"
@@ -164,9 +138,7 @@
 		<Info bind:controller>
 			<div class="relative">
 				<div class="absolute -top-5 -left-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
-					<h1 class="text-base">
-						<button on:click={() => biblio('s4')}>Source 4: 1850s Sailing Clipper by Bill Wood.</button>
-					</h1>
+					<h1 class="text-base">Source 4: 1850s Sailing Clipper by Bill Wood.</h1>
 				</div>
 				<img
 					src="https://museumsvictoria.com.au/media/6928/000010127.jpg"
@@ -209,9 +181,7 @@
 			</div>
 			<div class="relative">
 				<div class="absolute -top-5 -right-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
-					<h1 class="text-base">
-						<button on:click={() => biblio('s5')}>Source 5: The wreck of the 'Loch Ard' in 1878.</button>
-					</h1>
+					<h1 class="text-base">Source 5: The wreck of the 'Loch Ard' in 1878.</h1>
 				</div>
 				<img
 					src="https://museumsvictoria.com.au/media/6933/000010025-loch-ard.jpg"
@@ -224,9 +194,7 @@
 		<Info bind:controller>
 			<div class="relative">
 				<div class="absolute -top-5 -left-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
-					<h1 class="text-base">
-						<button on:click={() => biblio('s6')}>Source 6: The 'Great Circle' route used to get to Australia.</button>
-					</h1>
+					<h1 class="text-base">Source 6: The 'Great Circle' route used to get to Australia.</h1>
 				</div>
 				<img
 					src="https://museumsvictoria.com.au/media/6931/000017841.jpg"
@@ -262,9 +230,7 @@
 		<Info bind:controller>
 			<div class="relative">
 				<div class="absolute -top-5 -right-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
-					<h1 class="text-base">
-						<button on:click={() => biblio('s7')}>Source 7: 'Emigrants at dinner' by unknown artist.</button>
-					</h1>
+					<h1 class="text-base">Source 7: 'Emigrants at dinner' by unknown artist.</h1>
 				</div>
 				<img
 					src="https://museumsvictoria.com.au/media/6936/000009990.jpg"
@@ -293,9 +259,7 @@
 			</div>
 			<div class="relative">
 				<div class="absolute -top-5 -right-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
-					<h1 class="text-base">
-						<button on:click={() => biblio('s8')}>Source 8: Ally Heathcote's diary.</button>
-					</h1>
+					<h1 class="text-base">Source 8: Ally Heathcote's diary.</h1>
 				</div>
 				<img
 					src="https://collections.museumsvictoria.com.au/content/media/32/296632-small.jpg"
@@ -308,9 +272,7 @@
 		<Info bind:controller>
 			<div class="relative">
 				<div class="absolute -top-5 -left-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
-					<h1 class="text-base">
-						<button on:click={() => biblio('s9')}>Source 9: An artwork of Chinese immigrants.</button>
-					</h1>
+					<h1 class="text-base">Source 9: An artwork of Chinese immigrants.</h1>
 				</div>
 				<img
 					src="https://museumsvictoria.com.au/media/6926/000000357.jpg"
@@ -356,9 +318,7 @@
 			</div>
 			<div class="relative">
 				<div class="absolute -top-5 -right-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
-					<h1 class="text-base">
-						<button on:click={() => biblio('s10')}>Source 10: A gold license used in Ballarat.</button>
-					</h1>
+					<h1 class="text-base">Source 10: A gold license used in Ballarat.</h1>
 				</div>
 				<img
 					src="https://www.oldtreasurybuilding.org.au/wp-content/uploads/2018/06/Gold-Licence-ed-sm.jpg"
@@ -372,7 +332,7 @@
 			<div class="relative">
 				<div class="absolute -top-5 -left-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
 					<h1 class="text-base">
-						<button on:click={() => biblio('s11')}>Source 11: 'Swearing Allegiance to the Southern Cross' by Charles A Doudiet.</button>
+						Source 11: 'Swearing Allegiance to the Southern Cross' by Charles A Doudiet.
 					</h1>
 				</div>
 				<img
@@ -417,9 +377,7 @@
 			</div>
 			<div class="relative">
 				<div class="absolute -top-5 -left-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
-					<h1 class="text-base">
-						<button on:click={() => biblio('s12')}>Source 12: Replica of the Welcome Nugget.</button>
-					</h1>
+					<h1 class="text-base">Source 12: Replica of the Welcome Nugget.</h1>
 				</div>
 				<img
 					src="https://sovereignhill.com.au/uploads/images/Welcome-Nugget-Replica_Landscape.jpg"
@@ -438,14 +396,14 @@
 					to Ballarat as a result of the gold rush. I hope you enjoyed reading about the fascinating history
 					of Ballarat's gold rush, and the events that happened during the time.
 				</p>
-				<button class="bg-amber-500 p-2 px-3 rounded-lg hover:underline" on:click={showBibliography}
-					>View bibliography →</button
+				<button class="bg-amber-500 p-2 px-3 rounded-lg hover:underline my-5" on:click={showBibliography}
+					>View references list →</button
 				>
-				<p class="text-base mt-10">
+				<p class="text-base mt-5">
 					Made with Svelte, Tailwindcss and ScrollMagic. Hosted on Vercel. <a
 						href="https://github.com/TheCoder76-Codes/gold"
 						class="hover:underline">Source code here on Github.</a
-					> Created by TheCoder76.
+					> Created by Max May (TheCoder76). Last updated on 25/03/2023
 				</p>
 			</div>
 		</Info>
@@ -457,16 +415,105 @@
 		</div>
 	</main>
 {:else if bibliographyShown}
-	<div class="p-5 bg-black text-white min-h-screen" transition:fade>
-		<h1 class="text-4xl font-display">BIBLIOGRAPHY</h1>
-		<h1 class="text-2xl font-display">Sources</h1>
-
-		<!-- Sources Bibliography -->
-		<h1 class="text-2xl font-display">Images</h1>
-		{#each sources as source, i}
-			<div id={`s${i + 1}`}>
-				{source}
-			</div>
-		{/each}
+	<div class="p-5 bg-black text-white min-h-screen refernces" transition:fade>
+		<h1 class="text-4xl font-display">References</h1>
+		<p class="text-base max-w-xl">
+			Ally Heathcote. (1874). Diary – Ally Heatcote, England to Melbourne, Victoria, Onboard ‘SS Northumberland’,
+			1874. Museums Victoria Collections.
+			<a href="https://collections.museumsvictoria.com.au/items/272753"
+				>https://collections.museumsvictoria.com.au/items/272753</a
+			>
+		</p>
+		<p class="text-base max-w-xl">
+			Britannica, T. Editors of Encyclopaedia (2021, August 12). Gold rush. Encyclopedia Britannica.
+			<a href="https://www.britannica.com/event/gold-rush">https://www.britannica.com/event/gold-rush</a>
+		</p>
+		<p class="text-base max-w-xl">
+			Curator, Old Treasury Building. (n.d.). The Humble Petition of the Chinese Storekeepers. Old Treasury
+			Building.
+			<a href="https://www.oldtreasurybuilding.org.au/the-humble-petition-of-the-chinese-storekeepers/"
+				>https://www.oldtreasurybuilding.org.au/the-humble-petition-of-the-chinese-storekeepers/</a
+			>
+		</p>
+		<p class="text-base max-w-xl">
+			Curator, Old Treasury Building. (n.d.). Welcome Stranger Replica Nugget.
+			<a href="https://www.oldtreasurybuilding.org.au/welcome-stranger-replica-nugget/"
+				>https://www.oldtreasurybuilding.org.au/welcome-stranger-replica-nugget/</a
+			>
+		</p>
+		<p class="text-base max-w-xl">
+			Documenting Democracy. (n.d.). Chinese Immigration Act 1855 (Vic).
+			<a href="https://www.foundingdocs.gov.au/item-sdid-18.html"
+				>https://www.foundingdocs.gov.au/item-sdid-18.html</a
+			>
+		</p>
+		<p class="text-base max-w-xl">
+			Immigration Museum. (n.d.) Journeys to Australia.
+			<a href="https://museumsvictoria.com.au/immigrationmuseum/resources/journeys-to-australia/"
+				>https://museumsvictoria.com.au/immigrationmuseum/resources/journeys-to-australia/</a
+			>
+		</p>
+		<p class="text-base max-w-xl">
+			Monument Australia. (n.d.). Poverty Point Gold Discovery.
+			<a href="https://www.monumentaustralia.org.au/display/30207-poverty-point-gold-discovery"
+				>https://www.monumentaustralia.org.au/display/30207-poverty-point-gold-discovery</a
+			>
+		</p>
+		<p class="text-base max-w-xl">
+			National Geographic Society. (n.d.) Australian Gold Rush Begins. National Geographic.
+			<a href="https://education.nationalgeographic.org/resource/australian-gold-rush-begins/"
+				>https://education.nationalgeographic.org/resource/australian-gold-rush-begins/</a
+			>
+		</p>
+		<p class="text-base max-w-xl">
+			National Museum Australia. (2022, September 21). Defining Moments: Eureka Stockade.
+			<a href="https://www.nma.gov.au/defining-moments/resources/eureka-stockade"
+				>https://www.nma.gov.au/defining-moments/resources/eureka-stockade</a
+			>
+		</p>
+		<p class="text-base max-w-xl">
+			National Museum Australia. (2023, February 8). Defining Moments: Gold Rushes.
+			<a href="https://www.nma.gov.au/defining-moments/resources/gold-rushes"
+				>https://www.nma.gov.au/defining-moments/resources/gold-rushes</a
+			>
+		</p>
+		<p class="text-base max-w-xl">
+			National Museum Australia. (n.d.) Victorian Goldfields: Victorian goldfields for kids.
+			<a href="https://www.nma.gov.au/learn/kspace/victorian-goldfields-1854/kids"
+				>https://www.nma.gov.au/learn/kspace/victorian-goldfields-1854/kids</a
+			>
+		</p>
+		<p class="text-base max-w-xl">
+			Pamie Fung. (2015, June 12). The Significance of the First Anti-Chinese Legislation in Australia. Peril.
+			<a href="https://peril.com.au/topics/politics/anti-chinese-legislation-in-australia/"
+				>https://peril.com.au/topics/politics/anti-chinese-legislation-in-australia/</a
+			>
+		</p>
+		<p class="text-base max-w-xl">
+			Reserve Bank of Australia. (n.d.). Pre-Decimal Inflation Calculator.
+			<a href="https://www.rba.gov.au/calculator/annualPreDecimal.html"
+				>https://www.rba.gov.au/calculator/annualPreDecimal.html</a
+			>
+		</p>
+		<p class="text-base max-w-xl">
+			SBS Gold. (n.d.). Interactive Map.
+			<a href="https://www.sbs.com.au/gold/map/">https://www.sbs.com.au/gold/map/</a>
+		</p>
+		<p class="text-base max-w-xl">
+			SBS Gold. (n.d.). Rush for Gold.
+			<a href="https://www.sbs.com.au/gold/rush-for-gold/">https://www.sbs.com.au/gold/rush-for-gold/</a>
+		</p>
+		<p class="text-base max-w-xl">
+			Sovereign Hill. (2021, June 8th). The Story of the Welcome Nugget.
+			<a href="https://sovereignhill.com.au/welcome-nugget">https://sovereignhill.com.au/welcome-nugget</a>
+		</p>
+		<button class="bg-amber-500 p-2 px-3 rounded-lg hover:underline" on:click={hideBibliography}>Go back →</button>
 	</div>
 {/if}
+
+<!-- 
+	- askew when violent seas
+	- text moving when water flooded
+	- page rattle when cups
+	- text left right side to side during night
+ -->
