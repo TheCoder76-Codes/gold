@@ -54,7 +54,7 @@
 			</div>
 			<div class="relative">
 				<div class="absolute -top-5 -right-5 bg-yellow-600 text-white py-1 px-3 rounded-full shadow-md">
-					<h1 class="text-base">Source 1: 'Prospectors' by ST Gill.</h1>
+					<h1 class="text-base">Source 1: 'Prospectors' by ST Gill, 1865.</h1>
 				</div>
 				<img
 					src="https://www.nma.gov.au/__data/assets/image/0010/547228/MA44137263-prospecting-1200w.jpg"
@@ -67,7 +67,7 @@
 		<Info bind:controller>
 			<div class="relative">
 				<div class="absolute -top-5 -left-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
-					<h1 class="text-base">Source 2: 'Gold Washing' by George French Angas.</h1>
+					<h1 class="text-base">Source 2: 'Gold Washing' by George French Angas, 1851.</h1>
 				</div>
 				<img
 					src="https://www.nma.gov.au/__data/assets/image/0007/567070/MA37181365-Gold-washing-1200w.jpg"
@@ -106,7 +106,7 @@
 			</div>
 			<div class="relative">
 				<div class="absolute -top-5 -right-5 bg-yellow-600 text-white py-1 px-3 rounded-full shadow-md">
-					<h1 class="text-base">Source 3: 'An Australian Gold Diggings' by Edwin Stockqueler.</h1>
+					<h1 class="text-base">Source 3: 'An Australian Gold Diggings' by Edwin Stockqueler, 1855.</h1>
 				</div>
 				<img
 					src="https://upload.wikimedia.org/wikipedia/commons/f/ff/An_Australian_Gold_Diggings.jpg"
@@ -181,7 +181,7 @@
 			</div>
 			<div class="relative">
 				<div class="absolute -top-5 -right-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
-					<h1 class="text-base">Source 5: The wreck of the 'Loch Ard' in 1878.</h1>
+					<h1 class="text-base">Source 5: The wreck of the 'Loch Ard', 1878.</h1>
 				</div>
 				<img
 					src="https://museumsvictoria.com.au/media/6933/000010025-loch-ard.jpg"
@@ -230,7 +230,7 @@
 		<Info bind:controller>
 			<div class="relative">
 				<div class="absolute -top-5 -right-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
-					<h1 class="text-base">Source 7: 'Emigrants at dinner' by unknown artist.</h1>
+					<h1 class="text-base">Source 7: 'Emigrants at dinner' by unknown artist, 1844.</h1>
 				</div>
 				<img
 					src="https://museumsvictoria.com.au/media/6936/000009990.jpg"
@@ -259,11 +259,11 @@
 			</div>
 			<div class="relative">
 				<div class="absolute -top-5 -right-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
-					<h1 class="text-base">Source 8: Ally Heathcote's diary.</h1>
+					<h1 class="text-base">Source 8: Ally Heathcote's diary, 1874.</h1>
 				</div>
 				<img
 					src="https://collections.museumsvictoria.com.au/content/media/32/296632-small.jpg"
-					alt="The wreck of the 'Loch Ard' in 1878"
+					alt="Ally Heathcotes Diary"
 					width="500px"
 					height="300px"
 				/>
@@ -272,7 +272,7 @@
 		<Info bind:controller>
 			<div class="relative">
 				<div class="absolute -top-5 -left-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
-					<h1 class="text-base">Source 9: An artwork of Chinese emigrants.</h1>
+					<h1 class="text-base">Source 9: An artwork of Chinese emigrants, 1857.</h1>
 				</div>
 				<img
 					src="https://museumsvictoria.com.au/media/6926/000000357.jpg"
@@ -332,7 +332,7 @@
 			<div class="relative">
 				<div class="absolute -top-5 -left-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
 					<h1 class="text-base">
-						Source 11: 'Swearing Allegiance to the Southern Cross' by Charles A Doudiet.
+						Source 11: 'Swearing Allegiance to the Southern Cross' by Charles A Doudiet, 1854.
 					</h1>
 				</div>
 				<img
@@ -403,7 +403,7 @@
 					Made with Svelte, Tailwindcss and ScrollMagic. Hosted on Vercel. <a
 						href="https://github.com/TheCoder76-Codes/gold"
 						class="hover:underline">Source code here on Github.</a
-					> Created by Max May (TheCoder76). Last updated on 25/03/2023
+					> Created by Max May (TheCoder76). Last updated on 27/03/2023
 				</p>
 			</div>
 		</Info>
