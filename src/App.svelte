@@ -376,7 +376,7 @@
 				</p>
 			</div>
 			<div class="relative">
-				<div class="absolute -top-5 -left-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
+				<div class="absolute -top-5 -right-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
 					<h1 class="text-base">Source 12: Replica of the Welcome Nugget.</h1>
 				</div>
 				<img
@@ -510,10 +510,3 @@
 		<button class="bg-amber-500 p-2 px-3 rounded-lg hover:underline" on:click={hideBibliography}>Go back →</button>
 	</div>
 {/if}
-
-<!-- 
-	- askew when violent seas
-	- text moving when water flooded
-	- page rattle when cups
-	- text left right side to side during night
- -->
