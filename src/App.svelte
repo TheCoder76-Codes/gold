@@ -330,7 +330,7 @@
 		</Info>
 		<Info bind:controller>
 			<div class="relative">
-				<div class="absolute -top-5 -left-5 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
+				<div class="absolute -top-5 -left-16 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
 					<h1 class="text-base">
 						Source 11: 'Swearing Allegiance to the Southern Cross' by Charles A Doudiet, 1854.
 					</h1>
