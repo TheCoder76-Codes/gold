@@ -11,11 +11,10 @@
 		})
 			.setTween(contentAnim)
 			.addTo(controller)
-		console.log(content.parentElement)
 	})
 </script>
 
-<div bind:this={content} class="text-white p-10 z-20 flex items-center justify-center gap-10">
+<div bind:this={content} class="text-white p-10 z-20 md:flex items-center justify-center gap-10">
 	<slot />
 	<!-- <div>
 		<h1 class="text-4xl font-display">WHAT IS THE GOLD RUSH?</h1>

@@ -330,7 +330,9 @@
 		</Info>
 		<Info bind:controller>
 			<div class="relative">
-				<div class="absolute -top-5 -left-16 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md">
+				<div
+					class="absolute -top-5 -left-5 2xl:-left-16 bg-amber-500 text-white py-1 px-3 rounded-full shadow-md"
+				>
 					<h1 class="text-base">
 						Source 11: 'Swearing Allegiance to the Southern Cross' by Charles A Doudiet, 1854.
 					</h1>
@@ -403,7 +405,15 @@
 					Made with Svelte, Tailwindcss and ScrollMagic. Hosted on Vercel. <a
 						href="https://github.com/TheCoder76-Codes/gold"
 						class="hover:underline">Source code here on Github.</a
-					> Created by Max May (TheCoder76). Last updated on 27/03/2023
+					>
+					Created by Max May (TheCoder76). Last updated on 2/04/2023. This material is licensed under the GNU AGPLv3
+					license. For more information, visit
+					<a
+						href="https://choosealicense.com/licenses/agpl-3.0/"
+						target="_blank"
+						rel="noreferrer"
+						class="hover:underline">this website.</a
+					>
 				</p>
 			</div>
 		</Info>

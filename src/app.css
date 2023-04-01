@@ -10,3 +10,6 @@
 .refernces p {
 	@apply my-3;
 }
+div > img {
+	@apply my-7 md:my-0;
+}
