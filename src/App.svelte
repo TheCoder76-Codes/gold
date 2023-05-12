@@ -382,7 +382,7 @@
 					<h1 class="text-base">Source 12: Replica of the Welcome Nugget.</h1>
 				</div>
 				<img
-					src="https://sovereignhill.com.au/uploads/images/Welcome-Nugget-Replica_Landscape.jpg"
+					src="https://www.sovereignhill.com.au/_next/image/?url=https://cdn.sovereignhill.com.au/_fullFit/7658/Welcome-Nugget-Replica_Landscape.webp&w=1080&q=75"
 					alt="Replica of the Welcome Nugget"
 					width="600px"
 					height="400px"
@@ -406,10 +406,10 @@
 						href="https://github.com/TheCoder76-Codes/gold"
 						class="hover:underline">Source code here on Github.</a
 					>
-					Created by Max May (TheCoder76). Last updated on 2/04/2023. This material is licensed under the GNU AGPLv3
+					Created by Max May (TheCoder76). Last updated on 12/05/2023. This material is licensed under the CC-BY-SA
 					license. For more information, visit
 					<a
-						href="https://choosealicense.com/licenses/agpl-3.0/"
+						href="https://creativecommons.org/licenses/by-sa/4.0/"
 						target="_blank"
 						rel="noreferrer"
 						class="hover:underline">this website.</a
