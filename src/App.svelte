@@ -406,10 +406,10 @@
 						href="https://github.com/TheCoder76-Codes/gold"
 						class="hover:underline">Source code here on Github.</a
 					>
-					Created by Max May (TheCoder76). Last updated on 12/05/2023. This material is licensed under the CC-BY-SA
-					license. For more information, visit
+					Created by Max May (TheCoder76). Last updated on 12/05/2023. This material is licensed under the GNU
+					AGPLv3 license. For more information, visit
 					<a
-						href="https://creativecommons.org/licenses/by-sa/4.0/"
+						href="https://choosealicense.com/licenses/agpl-3.0/"
 						target="_blank"
 						rel="noreferrer"
 						class="hover:underline">this website.</a
